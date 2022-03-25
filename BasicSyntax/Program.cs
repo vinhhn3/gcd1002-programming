@@ -33,6 +33,30 @@ namespace BasicSyntax
       Console.WriteLine("Enter your new age: ");
       myAge = int.Parse(Console.ReadLine());
       Console.WriteLine($"Your new age: {myAge}");
+
+      // Comparaison Operators
+      int a = 5;
+      int b = 10;
+      Console.WriteLine(a < b);       // true			
+      Console.WriteLine(a > 0);       // true
+      Console.WriteLine(a > 100);     // false
+      Console.WriteLine(a < a);       // false
+      Console.WriteLine(a <= 5);      // true
+      Console.WriteLine(b == 2 * a);  // true
+
+      // Logical Operators
+      // AND (&&)
+      // true && true = true
+      Console.WriteLine((a > 1) && (b > a));  // true
+
+      // OR (||)
+      // false || false = false
+      Console.WriteLine(a > 6 || b > 12);    // false
+      Console.WriteLine(a > 6 || b > 3);    // true
+
+      // NOT (!)
+      Console.WriteLine(!(a > 6));    // !false = true
+
     }
   }
 }
