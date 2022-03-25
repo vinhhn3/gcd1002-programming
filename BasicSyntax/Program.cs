@@ -57,6 +57,50 @@ namespace BasicSyntax
       // NOT (!)
       Console.WriteLine(!(a > 6));    // !false = true
 
+      // if-else statements
+      // if (condition 1)
+      // {
+      //    doSomething();
+      // }
+      // else if (condition 2)
+      // {
+      //    doAnotherThing();
+      // }
+      // else
+      // {
+      //    doThis();
+      // }
+      myAge = 20;
+      if (myAge > 18 && myAge < 60)
+      {
+        Console.WriteLine("You can buy cigaretters");
+      }
+      else if (myAge > 60)
+      {
+        Console.WriteLine("Do not smoke, you will die soon");
+      }
+      else
+      {
+        Console.WriteLine("You cannot buy cigarettes");
+      }
+
+      // switch case statements
+      string myGrade = "Pass";
+      switch (myGrade)
+      {
+        case "Pass":
+          Console.WriteLine("Your mark is between 5 and 6.5");
+          break;
+        case "Merit":
+          Console.WriteLine("Your mark is between 7 and 8.5");
+          break;
+        case "Distinction":
+          Console.WriteLine("Your mark is between 9 and 10");
+          break;
+        default:
+          Console.WriteLine("Failed ... Your mark is less than 5");
+          break;
+      }
     }
   }
 }
