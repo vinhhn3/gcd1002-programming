@@ -101,6 +101,31 @@ namespace BasicSyntax
           Console.WriteLine("Failed ... Your mark is less than 5");
           break;
       }
+      // for loop
+      int startValue = 0;
+      int endValue = 10;
+      for (int i = startValue; i < endValue; i++)
+      {
+        Console.WriteLine(i);
+        // 0
+        // 1
+        // 2
+        // 3
+        // ...
+        // 9
+      }
+
+      // while-loop
+      // while(condition == true) {
+      //  doSomething();
+      // }
+      int index = 0;
+      while (index < 10)
+      {
+        Console.WriteLine($"Value of i: {index}");
+        index++;
+      }
     }
   }
+}
 }
