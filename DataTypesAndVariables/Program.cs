@@ -105,6 +105,16 @@ namespace DataTypesAndVariables
       Console.WriteLine(symbol); // '\'
       symbol = '\u8449'; // Chinese character
       Console.WriteLine(symbol);
+
+      // String type
+      string text = "Hello World, C#. ";
+      Console.WriteLine(text + "This is Vinh Hoang");
+      // Hello World, C#. This is Vinh Hoang
+      string url = "C:\\Users\\nhuvi";
+      Console.WriteLine(url); // C:\Users\nhuvi
+      // No escape "@"
+      url = @"C:\Users\nhuvi";
+
     }
   }
 }
