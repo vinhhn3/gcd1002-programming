@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicSyntax", "BasicSyntax\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypesAndVariables", "DataTypesAndVariables\DataTypesAndVariables.csproj", "{BB11D1B8-B23A-4A62-91A8-EE335E2B82B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypesAndVariables.Lab", "DataTypesAndVariables.Lab\DataTypesAndVariables.Lab.csproj", "{2E942C81-7B6C-4038-8517-7552D62BA40E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BB11D1B8-B23A-4A62-91A8-EE335E2B82B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB11D1B8-B23A-4A62-91A8-EE335E2B82B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB11D1B8-B23A-4A62-91A8-EE335E2B82B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E942C81-7B6C-4038-8517-7552D62BA40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E942C81-7B6C-4038-8517-7552D62BA40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E942C81-7B6C-4038-8517-7552D62BA40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E942C81-7B6C-4038-8517-7552D62BA40E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
