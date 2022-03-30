@@ -42,7 +42,8 @@ namespace DataTypesAndVariables
       double sizeInDouble = size; // 64 bits
 
       double weight = 70.12;        // 64 bits
-      //float weightInFloat = weight;  Cannot convert because 32 bits (float) < 64 bits (double)
+      //float weightInFloat = weight;
+      //Cannot convert because 32 bits (float) < 64 bits (double)
 
       // Explicit Conversion
       float weightInFloat = (float)weight;
@@ -95,6 +96,15 @@ namespace DataTypesAndVariables
       Console.WriteLine("Converting to Upper Case ...");
       char upperCase = (char)((int)lowerCase - 32);
       Console.WriteLine(upperCase);
+
+      // Character Literals
+      char symbol = 'a';
+      symbol = '\n';  // New Line
+      symbol = '\t';  // Tab
+      symbol = '\\';  // backslah
+      Console.WriteLine(symbol); // '\'
+      symbol = '\u8449'; // Chinese character
+      Console.WriteLine(symbol);
     }
   }
 }
