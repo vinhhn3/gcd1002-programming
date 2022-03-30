@@ -26,7 +26,7 @@ namespace BasicIntroduction
       SolveFirstDegreeFunction(1, 2);
       SolveFirstDegreeFunction(0, 2);
       SolveFirstDegreeFunction(1, 0);
-
+      Console.ReadLine();
     }
   }
 
