@@ -83,6 +83,18 @@ namespace DataTypesAndVariables
       bool equalA1 = (a == 1);
       Console.WriteLine(equalA1);    // True
 
+      // Character Type
+      char ch = 'a';  // 16 bits
+      Console.WriteLine(ch);        // 'a'
+      Console.WriteLine((int)ch);   // 97
+      Console.WriteLine((char)65);  // 'A'
+
+      // Convert lower case character to upper case character
+      Console.WriteLine("Enter a lower case character: ");
+      char lowerCase = Convert.ToChar(Console.ReadLine());
+      Console.WriteLine("Converting to Upper Case ...");
+      char upperCase = (char)((int)lowerCase - 32);
+      Console.WriteLine(upperCase);
     }
   }
 }
