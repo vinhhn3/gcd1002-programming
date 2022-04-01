@@ -26,7 +26,7 @@ namespace Arrays
         Console.WriteLine($"marks[{i}] = {marks[i]}");
       }
 
-      // Enter a day number [1…7] and
+      // Enter a day number [1...7] and
       // print the day name (in English) or "Invalid day!"
 
       // Create an array that stores days of a week
@@ -83,6 +83,28 @@ namespace Arrays
                 .Select(int.Parse)
                 .ToArray();
 
+      // Problem: Print Numbers in Reverse Order
+      // Read an array of integers (n lines of integers),
+      // reverse it and print its elements on a single line, space-separated
+
+      // Read an integer number n
+      Console.WriteLine("Enter an integer number:");
+      int n = int.Parse(Console.ReadLine());
+
+      // Read values to array
+      Console.WriteLine("Enter values:");
+      int[] arr = new int[n];
+      for (int i = 0; i < arr.Length; i++)
+      {
+        arr[i] = int.Parse(Console.ReadLine());
+      }
+
+      // Print the array in reverse order
+      Console.WriteLine("Print the array in reverse order:");
+      for (int i = arr.Length - 1; i >= 0; i--)
+      {
+        Console.WriteLine(arr[i]);
+      }
     }
   }
 }
