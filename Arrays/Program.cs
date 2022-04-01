@@ -105,6 +105,28 @@ namespace Arrays
       {
         Console.WriteLine(arr[i]);
       }
+
+      // for loop
+      // Read and Write
+      for (int i = 0; i < arr.Length; i++)
+      {
+        // Read
+        Console.WriteLine(arr[i]);
+        // Write
+        arr[i] = 10;
+      }
+
+      // Read-Only
+      foreach (int item in arr)
+      {
+        // Read
+        Console.WriteLine(item);
+        // item = 10; Cannot write new value 
+        // C: Create
+        // R: Read
+        // U: Update
+        // D: Delete
+      }
     }
   }
 }
