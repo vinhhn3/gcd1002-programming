@@ -66,6 +66,7 @@ namespace Lists
       }
 
       // Reading lists from console
+      Console.WriteLine("Reading lists from console");
       string inputLine = Console.ReadLine();
 
       // First Method
@@ -92,6 +93,29 @@ namespace Lists
       foreach (var item in numbers)
       {
         Console.WriteLine(item);
+      }
+
+      // Problem: Sum Adjacent Equal Numbers
+      Console.WriteLine("Problem: Sum Adjacent Equal Numbers");
+      inputLine = Console.ReadLine();
+      numbers = inputLine
+                  .Split()
+                  .Select(int.Parse)
+                  .ToList();
+      for (int i = 0; i < numbers.Count - 1; i++)
+      {
+        if (numbers[i] == numbers[i + 1])
+        {
+          numbers[i] = numbers[i] + numbers[i + 1];
+          numbers.RemoveAt(i + 1);
+          i = -1;
+        }
+      }
+
+      Console.WriteLine("Final Result");
+      foreach (var item in numbers)
+      {
+        Console.Write($"{item} ");
       }
     }
   }
