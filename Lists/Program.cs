@@ -117,6 +117,32 @@ namespace Lists
       {
         Console.Write($"{item} ");
       }
+
+      // Problem: Gauss' Trick
+      Console.WriteLine("Problem: Gauss' Trick");
+      inputLine = Console.ReadLine();
+      numbers = inputLine
+                  .Split()
+                  .Select(int.Parse)
+                  .ToList();
+      List<int> result = new List<int>();
+
+      for (int i = 0; i < numbers.Count / 2; i++)
+      {
+        numbers[i] = numbers[i] + numbers[numbers.Count - 1 - i];
+        result.Add(numbers[i]);
+      }
+
+      if (numbers.Count % 2 != 0)
+      {
+        result.Add(numbers[numbers.Count / 2]);
+      }
+
+      Console.WriteLine("Final Result");
+      foreach (var item in result)
+      {
+        Console.Write($"{item} ");
+      }
     }
   }
 }
