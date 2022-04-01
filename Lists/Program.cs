@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Lists
 {
@@ -64,6 +65,34 @@ namespace Lists
         Console.WriteLine($"{n} is not an item of the list numbers");
       }
 
+      // Reading lists from console
+      string inputLine = Console.ReadLine();
+
+      // First Method
+      string[] arrInputLine = inputLine.Split();
+
+      List<int> listInt = new List<int>();
+      foreach (var item in arrInputLine)
+      {
+        listInt.Add(int.Parse(item));
+      }
+
+      // Second Method using LINQ
+      listInt = Console.ReadLine()
+                  .Split()
+                  .Select(int.Parse)
+                  .ToList();
+
+      // Reverse an Array
+      numbers = new List<int>
+      {
+        1,2,3,4,5,6,7,8,9,10
+      };
+      numbers.Reverse();
+      foreach (var item in numbers)
+      {
+        Console.WriteLine(item);
+      }
     }
   }
 }
