@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Arrays
 {
@@ -50,7 +51,37 @@ namespace Arrays
         Console.WriteLine(daysOfWeek[dayNumber - 1]);
       }
 
+      // Reading a string
+      // Convert it to an integer array
+      // First method
+      Console.WriteLine("Enter values: ");
+      string values = Console.ReadLine();
 
+      string[] arrayValues = values.Split();
+
+      int[] arrayInt = new int[arrayValues.Length];
+
+      for (int i = 0; i < arrayInt.Length; i++)
+      {
+        arrayInt[i] = int.Parse(arrayValues[i]);
+      }
+
+      for (int i = 0; i < arrayInt.Length; i++)
+      {
+        Console.WriteLine(arrayInt[i]);
+      }
+
+      // Second Method
+      string inputLine = Console.ReadLine();
+      string[] items = inputLine.Split();
+      // LINQ
+      int[] array = items.Select(int.Parse).ToArray();
+
+      // Even Shorter
+      array = Console.ReadLine()
+                .Split()
+                .Select(int.Parse)
+                .ToArray();
 
     }
   }
