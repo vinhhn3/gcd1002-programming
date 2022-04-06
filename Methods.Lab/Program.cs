@@ -55,10 +55,10 @@ namespace Methods.Lab
       int sum = 0;
       while (number != 0)
       {
-        int modulo = number % 10;
-        if (IsEven(modulo))
+        int moduloByTen = number % 10;
+        if (IsEven(moduloByTen))
         {
-          sum = sum + modulo;
+          sum = sum + moduloByTen;
         }
         number = number / 10;
       }
@@ -71,10 +71,10 @@ namespace Methods.Lab
       int sum = 0;
       while (number != 0)
       {
-        int modulo = number % 10;
-        if (!IsEven(modulo))
+        int moduloByTen = number % 10;
+        if (!IsEven(moduloByTen))
         {
-          sum = sum + modulo;
+          sum = sum + moduloByTen;
         }
         number = number / 10;
       }
