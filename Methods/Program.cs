@@ -6,6 +6,7 @@ namespace Methods
   {
     static void Main(string[] args)
     {
+      Hello();
       Console.WriteLine("Hello World!");
       int fixedSalary = 100;
       int bonus = 20;
@@ -76,6 +77,16 @@ namespace Methods
     static string PrintHello(string firstName, string lastName)
     {
       return firstName + " " + lastName;
+    }
+
+    static void Hello()
+    {
+      Bonjour();
+    }
+
+    static void Bonjour()
+    {
+      Hello();
     }
 
   }
