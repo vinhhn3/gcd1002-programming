@@ -28,6 +28,10 @@ namespace Methods
       IncreaseAgeArray(arrayAge);        // Heap
       Console.WriteLine(arrayAge[0]);   // 11 
 
+      string name = "Vinh Hoang";
+      PrintHello(name);
+      PrintHello();
+
     }
 
     static void IncreaseAgeArray(int[] arr)
@@ -56,5 +60,23 @@ namespace Methods
       int result = SumTwoInt(a, SumTwoInt(b, c));
       return result;
     }
+
+    // Method without Parameters
+    static string PrintHello()
+    {
+      return "This is default Hello World !!!";
+    }
+
+    // Method without return data type (void)
+    static void PrintHello(string name)
+    {
+      Console.WriteLine($"Hello {name}. Welcome to CSharp");
+    }
+
+    static string PrintHello(string firstName, string lastName)
+    {
+      return firstName + " " + lastName;
+    }
+
   }
 }
