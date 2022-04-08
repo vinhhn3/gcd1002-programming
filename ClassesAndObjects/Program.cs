@@ -40,6 +40,18 @@ namespace ClassesAndObjects
       Age = age;
       Address = "No Way Home";
     }
+
+    // Methods
+    public void Eat()
+    {
+      Console.WriteLine("Eating ...");
+    }
+
+    public void Eat(string food)
+    {
+      Console.WriteLine($"{FullName} is eating {food}");
+    }
+
   }
 
   internal class Program
@@ -56,8 +68,8 @@ namespace ClassesAndObjects
       // 
       // Assigned values to properties of object
       // ".": access property of an object
-      //// VariableName.PropertyName
-      //alice.FullName = "ALice Kim";
+      // VariableName.PropertyName
+      //alice.FullName = "Alice Kim";
       //alice.Age = 35;
       //alice.Address = "127B Agent Street";
 
@@ -76,6 +88,8 @@ namespace ClassesAndObjects
       Console.WriteLine($"Age: {alice.Age}");
       Console.WriteLine($"Address: {alice.Address}");
 
+      spiderMan.Eat();
+      spiderMan.Eat("Pizza");
     }
   }
 }
