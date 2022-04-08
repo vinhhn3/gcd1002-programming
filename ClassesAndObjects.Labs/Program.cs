@@ -9,6 +9,34 @@ namespace ClassesAndObjects.Labs
   {
     static void Main(string[] args)
     {
+      // Songs
+      int numberOfSongs = int.Parse(Console.ReadLine());
+      List<Song> songs = new List<Song>();
+      for (int i = 0; i < numberOfSongs; i++)
+      {
+        Console.WriteLine("Enter the song with following format:" +
+          "{typeList}_{name}_{time}");
+        string inputSong = Console.ReadLine();
+        List<string> listProperties = inputSong
+                                        .Split("_")
+                                        .ToList();
+        Song tempSong = new Song(
+          listProperties[0],
+          listProperties[1],
+          listProperties[2]);
+        songs.Add(tempSong);
+      }
+
+      Console.WriteLine("Enter type list name:");
+      string typeListInput = Console.ReadLine();
+      foreach (var song in songs)
+      {
+        if (song.TypeList.Equals(typeListInput))
+        {
+          Console.WriteLine(song.Name);
+        }
+      }
+
       Console.WriteLine("Hello World!");
       // Day of Week
       // You are given a date in format day-month-year.
