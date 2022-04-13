@@ -6,6 +6,18 @@ namespace Inheritance
   {
     static void Main(string[] args)
     {
+      Person person = new Person();
+      Console.WriteLine(person.FullName);
+      Console.WriteLine(person.GetSalary());  // -1
+      person.SetSalary(100);
+      Console.WriteLine(person.GetSalary());  // 100
+      person.IncreaseSalary(267);
+      Console.WriteLine(person.GetSalary());  // 100 + 267 = 367
+      person.BuyStuffs();
+
+
+
+
       Student student = new Student();
       Console.WriteLine(student.FullName);  // Default Name
       Console.WriteLine(student.Age);       // 0
@@ -25,6 +37,8 @@ namespace Inheritance
       Console.WriteLine(anotherStudent.Major);    // Computing 
 
       student.Eat();
+
+
 
     }
   }
