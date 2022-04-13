@@ -35,5 +35,12 @@ namespace Inheritance
       Console.WriteLine("Student eats a lot ...");
       base.Sleep();
     }
+
+    public void PrintInfo()
+    {
+      Console.WriteLine(GetSalary()); // public
+      Console.WriteLine(_cash);
+      PrintCash();                          // protected
+    }
   }
 }

@@ -10,6 +10,7 @@ namespace Inheritance
     public byte Age { get; set; }
     public string Address { get; set; }
     private double _salary;
+    protected double _cash;
 
     // Constructor
     // Without Parameter
@@ -19,6 +20,7 @@ namespace Inheritance
       Age = 0;
       Address = "Default Address";
       _salary = -1;
+      _cash = 100;
     }
 
     // With Params
@@ -90,6 +92,11 @@ namespace Inheritance
     {
       BuyCar();
       BuyPhone();
+    }
+
+    protected void PrintCash()
+    {
+      Console.WriteLine(_cash);
     }
   }
 }

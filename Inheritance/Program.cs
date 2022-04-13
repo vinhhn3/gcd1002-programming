@@ -14,9 +14,7 @@ namespace Inheritance
       person.IncreaseSalary(267);
       Console.WriteLine(person.GetSalary());  // 100 + 267 = 367
       person.BuyStuffs();
-
-
-
+      //Console.WriteLine(person._cash);
 
       Student student = new Student();
       Console.WriteLine(student.FullName);  // Default Name
@@ -35,6 +33,7 @@ namespace Inheritance
 
       Console.WriteLine(anotherStudent.FullName); // John Doe
       Console.WriteLine(anotherStudent.Major);    // Computing 
+      anotherStudent.PrintInfo();
 
       student.Eat();
 
