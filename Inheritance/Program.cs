@@ -24,7 +24,6 @@ namespace Inheritance
       Console.WriteLine(anotherStudent.FullName); // John Doe
       Console.WriteLine(anotherStudent.Major);    // Computing 
 
-      student.Sleep();
       student.Eat();
 
     }

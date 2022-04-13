@@ -1,4 +1,6 @@
-﻿namespace Inheritance
+﻿using System;
+
+namespace Inheritance
 {
   // Student inherits Person
   class Student : Person
@@ -24,6 +26,14 @@
     {
       School = school;
       Major = major;
+    }
+
+    public void Eat()
+    {
+      //Console.WriteLine("Eating ...");
+      base.Eat();     // Method Eat() of Person class
+      Console.WriteLine("Student eats a lot ...");
+      base.Sleep();
     }
   }
 }
