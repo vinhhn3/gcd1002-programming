@@ -9,6 +9,8 @@ namespace Inheritance
     public string FullName { get; set; }
     public byte Age { get; set; }
     public string Address { get; set; }
+    private double _salary;
+    protected double _cash;
 
     // Constructor
     // Without Parameter
@@ -17,6 +19,8 @@ namespace Inheritance
       FullName = "Default Name";
       Age = 0;
       Address = "Default Address";
+      _salary = -1;
+      _cash = 100;
     }
 
     // With Params
@@ -58,6 +62,41 @@ namespace Inheritance
       Console.WriteLine("What is your name ???");
       Console.WriteLine($"My name is: {person.FullName}. " +
         $"Nice to meet you !!!");
+    }
+
+    public double GetSalary()
+    {
+      return _salary;
+    }
+
+    public void SetSalary(int newSalary)
+    {
+      _salary = newSalary;
+    }
+
+    public void IncreaseSalary(int addedSalary)
+    {
+      _salary = _salary + addedSalary;
+    }
+
+    private void BuyCar()
+    {
+      Console.WriteLine("Buying new car ...");
+    }
+
+    private void BuyPhone()
+    {
+      Console.WriteLine("Buying iPhone 13 Max Pro ...");
+    }
+    public void BuyStuffs()
+    {
+      BuyCar();
+      BuyPhone();
+    }
+
+    protected void PrintCash()
+    {
+      Console.WriteLine(_cash);
     }
   }
 }
