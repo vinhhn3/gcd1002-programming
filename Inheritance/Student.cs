@@ -10,7 +10,7 @@ namespace Inheritance
 
 
     // base keyword
-    // Call function of the Parent clas
+    // Call function of the Parent class
     public Student() : base()
     {
       //FullName = "Default Name";
@@ -28,19 +28,24 @@ namespace Inheritance
       Major = major;
     }
 
-    public void Eat()
-    {
-      //Console.WriteLine("Eating ...");
-      base.Eat();     // Method Eat() of Person class
-      Console.WriteLine("Student eats a lot ...");
-      base.Sleep();
-    }
-
     public void PrintInfo()
     {
       Console.WriteLine(GetSalary()); // public
       Console.WriteLine(_cash);
       PrintCash();                          // protected
+    }
+
+    // Overrding Methods
+    public override void Eat()
+    {
+      Console.WriteLine("I am a student");
+      Console.WriteLine("I am eating ...");
+    }
+
+    public override void Eat(string food)
+    {
+      Console.WriteLine("I am a student");
+      Console.WriteLine("I am eating " + food + "...");
     }
   }
 }

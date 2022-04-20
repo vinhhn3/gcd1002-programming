@@ -46,10 +46,7 @@ namespace Inheritance
     }
 
     // Methods
-    public void Eat()
-    {
-      Console.WriteLine("Eating ...");
-    }
+
 
     public void Sleep()
     {
@@ -97,6 +94,26 @@ namespace Inheritance
     protected void PrintCash()
     {
       Console.WriteLine(_cash);
+    }
+
+    // Overloading Methods
+    public virtual void Eat()
+    {
+      Console.WriteLine("Eating ...");
+    }
+    public virtual void Eat(string food)
+    {
+      Console.WriteLine($"{FullName} is eating {food} ...");
+    }
+
+    public void Eat(string food, int quantity)
+    {
+      Console.WriteLine($"{FullName} is eating {food}. The quatity is: {quantity}");
+    }
+
+    public string Eat(int times)
+    {
+      return $"{FullName} is eating {times} times";
     }
   }
 }
