@@ -12,6 +12,16 @@ namespace Inheritance
       person.Eat("ice cream", 10);
       Console.WriteLine(person.Eat(3)); // string
 
+      Student student = new Student(
+        "Stu 1",
+        18,
+        "Nghe An",
+        "Phu Dong",
+        "Computing"
+      );
+
+      student.Eat();
+      student.Eat("Sushi");
 
       Console.WriteLine(person.FullName);
       Console.WriteLine(person.GetSalary());  // -1
@@ -22,7 +32,7 @@ namespace Inheritance
       person.BuyStuffs();
       //Console.WriteLine(person._cash);
 
-      Student student = new Student();
+      student = new Student();
       Console.WriteLine(student.FullName);  // Default Name
       Console.WriteLine(student.Age);       // 0
       Console.WriteLine(student.Address);   // Default Address

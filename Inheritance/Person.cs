@@ -97,11 +97,11 @@ namespace Inheritance
     }
 
     // Overloading Methods
-    public void Eat()
+    public virtual void Eat()
     {
       Console.WriteLine("Eating ...");
     }
-    public void Eat(string food)
+    public virtual void Eat(string food)
     {
       Console.WriteLine($"{FullName} is eating {food} ...");
     }
