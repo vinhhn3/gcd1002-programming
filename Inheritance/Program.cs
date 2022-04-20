@@ -6,7 +6,13 @@ namespace Inheritance
   {
     static void Main(string[] args)
     {
-      Person person = new Person();
+      Person person = new Person("John Lennon", 40, "London");
+      person.Eat(); // void
+      person.Eat("bread");
+      person.Eat("ice cream", 10);
+      Console.WriteLine(person.Eat(3)); // string
+
+
       Console.WriteLine(person.FullName);
       Console.WriteLine(person.GetSalary());  // -1
       person.SetSalary(100);

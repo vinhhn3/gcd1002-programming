@@ -10,7 +10,7 @@ namespace Inheritance
 
 
     // base keyword
-    // Call function of the Parent clas
+    // Call function of the Parent class
     public Student() : base()
     {
       //FullName = "Default Name";
