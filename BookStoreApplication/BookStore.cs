@@ -45,5 +45,16 @@ namespace BookStoreApplication
       var result = Books.FirstOrDefault(x => x.Name == name);
       return result;
     }
+
+    public bool DeleteBookByName(string name)
+    {
+      var bookInStore = SearchBookByName(name);
+      if (bookInStore != null)
+      {
+        Books.Remove(bookInStore);
+        return true;
+      }
+      return false;
+    }
   }
 }
