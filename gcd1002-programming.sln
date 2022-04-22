@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesAndObjects.Labs", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{B7B1BEC9-E034-47AB-BECD-28F17F41E475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingConvention", "CodingConvention\CodingConvention.csproj", "{8DA6AD0B-4BF7-4FDD-B517-BE6A98825600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingConvention", "CodingConvention\CodingConvention.csproj", "{8DA6AD0B-4BF7-4FDD-B517-BE6A98825600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreApplication", "BookStoreApplication\BookStoreApplication.csproj", "{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{8DA6AD0B-4BF7-4FDD-B517-BE6A98825600}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DA6AD0B-4BF7-4FDD-B517-BE6A98825600}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DA6AD0B-4BF7-4FDD-B517-BE6A98825600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
