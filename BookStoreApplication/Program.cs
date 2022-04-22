@@ -7,6 +7,7 @@ namespace BookStoreApplication
     public const int LIST_ALL_BOOK = 1;
     public const int ADD_NEW_BOOK = 2;
     public const int SEARCH_BY_BOOK_NAME = 3;
+    public const int SEARCH_BY_AUTHOR_NAME = 4;
     public const int EXIT_APPLICATION = 9;
   }
 
@@ -15,6 +16,7 @@ namespace BookStoreApplication
     static void Main(string[] args)
     {
       BookStore store = new BookStore("Avengers");
+      LoadBooks(store);
       BookPresentator presentator = new BookPresentator();
       DisplayMenu();
       int command = int.Parse(Console.ReadLine());
@@ -41,6 +43,12 @@ namespace BookStoreApplication
             var books = store.SearchBooksByName(searchName);
             presentator.DisplayBooks(books);
             break;
+          case Command.SEARCH_BY_AUTHOR_NAME:
+            Console.WriteLine("Enter author book name: ");
+            string searchAuthor = Console.ReadLine();
+            var booksResult = store.SearchBooksByAuthorName(searchAuthor);
+            presentator.DisplayBooks(booksResult);
+            break;
           case Command.EXIT_APPLICATION:
             return;
           default:
@@ -57,10 +65,19 @@ namespace BookStoreApplication
       Console.WriteLine("1. Display all books in Store");
       Console.WriteLine("2. Add a new book to store");
       Console.WriteLine("3. Search book by name");
+      Console.WriteLine("4. Search book by author name");
       Console.WriteLine("9. Exit");
       Console.WriteLine("Please choose your options");
-
-
     }
+
+    public static void LoadBooks(BookStore store)
+    {
+      store.AddBook("C# Basic", "Kent Beck", 123);
+      store.AddBook("C# Advanced 1", "Kent Beck", 345);
+      store.AddBook("C# Advanced 2", "Kent Beck", 555);
+      store.AddBook("PHP Basic", "John Wick", 222);
+      store.AddBook("Symfony Framework", "John Doe", 555);
+    }
+
   }
 }
