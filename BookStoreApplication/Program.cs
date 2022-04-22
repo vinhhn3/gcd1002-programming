@@ -6,6 +6,7 @@ namespace BookStoreApplication
   {
     public const int LIST_ALL_BOOK = 1;
     public const int ADD_NEW_BOOK = 2;
+    public const int SEARCH_BY_BOOK_NAME = 3;
     public const int EXIT_APPLICATION = 9;
   }
 
@@ -34,6 +35,14 @@ namespace BookStoreApplication
             store.AddBook(bookName, bookAuthor, bookPrice);
             Console.WriteLine("Book added successfully ...");
             break;
+          case Command.SEARCH_BY_BOOK_NAME:
+            Console.WriteLine("Enter search book name: ");
+            string searchName = Console.ReadLine();
+            var books = store.SearchBooksByName(searchName);
+            presentator.DisplayBooks(books);
+            break;
+          case Command.EXIT_APPLICATION:
+            return;
           default:
             break;
         }
@@ -47,6 +56,8 @@ namespace BookStoreApplication
       Console.WriteLine("====BOOK STORE APPLICATION====");
       Console.WriteLine("1. Display all books in Store");
       Console.WriteLine("2. Add a new book to store");
+      Console.WriteLine("3. Search book by name");
+      Console.WriteLine("9. Exit");
       Console.WriteLine("Please choose your options");
 
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BookStoreApplication
 {
@@ -24,6 +25,21 @@ namespace BookStoreApplication
       foreach (var book in store.Books)
       {
         DisplayBookInfo(book);
+      }
+    }
+
+    public void DisplayBooks(List<Book> books)
+    {
+      if (books.Count == 0)
+      {
+        Console.WriteLine("Nothing Found ...");
+      }
+      else
+      {
+        foreach (var book in books)
+        {
+          DisplayBookInfo(book);
+        }
       }
     }
   }
