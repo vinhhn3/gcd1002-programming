@@ -30,5 +30,13 @@ namespace BookStoreApplication
         .ToList();
       return result;
     }
+
+    public List<Book> SearchBooksByAuthorName(string name)
+    {
+      List<Book> result = Books
+        .Where(x => x.Author.Contains(name))
+        .ToList();
+      return result;
+    }
   }
 }
