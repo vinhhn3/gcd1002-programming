@@ -8,6 +8,7 @@ namespace BookStoreApplication
     public const int ADD_NEW_BOOK = 2;
     public const int SEARCH_BY_BOOK_NAME = 3;
     public const int SEARCH_BY_AUTHOR_NAME = 4;
+    public const int UPDATE_BOOK_BY_NAME = 5;
     public const int EXIT_APPLICATION = 9;
   }
 
@@ -49,6 +50,29 @@ namespace BookStoreApplication
             var booksResult = store.SearchBooksByAuthorName(searchAuthor);
             presentator.DisplayBooks(booksResult);
             break;
+          case Command.UPDATE_BOOK_BY_NAME:
+            Console.WriteLine("Enter book name to update");
+            string updateBookName = Console.ReadLine();
+            Book bookInStore = store.SearchBookByName(updateBookName);
+            if (bookInStore == null)
+            {
+              Console.WriteLine("Book Not Found ...");
+              break;
+            }
+            else
+            {
+              Console.WriteLine(("Enter New Book Name:"));
+              string newName = Console.ReadLine();
+              Console.WriteLine(("Enter New Author Name:"));
+              string newAuthor = Console.ReadLine(); Console.WriteLine(("Enter New Book Name:"));
+              Console.WriteLine(("Enter New Price:"));
+              double newPrice = double.Parse(Console.ReadLine());
+              bookInStore.Name = newName;
+              bookInStore.Author = newAuthor;
+              bookInStore.Price = newPrice;
+            }
+            break;
+
           case Command.EXIT_APPLICATION:
             return;
           default:
@@ -66,6 +90,7 @@ namespace BookStoreApplication
       Console.WriteLine("2. Add a new book to store");
       Console.WriteLine("3. Search book by name");
       Console.WriteLine("4. Search book by author name");
+      Console.WriteLine("5. Update book by name");
       Console.WriteLine("9. Exit");
       Console.WriteLine("Please choose your options");
     }
