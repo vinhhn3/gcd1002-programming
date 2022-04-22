@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace BookStoreApplication
 {
@@ -20,6 +21,14 @@ namespace BookStoreApplication
     {
       Book newBook = new Book(Books.Count + 1, name, author, price);
       Books.Add(newBook);
+    }
+
+    public List<Book> SearchBooksByName(string name)
+    {
+      List<Book> result = Books
+        .Where(x => x.Name.Contains(name))
+        .ToList();
+      return result;
     }
   }
 }
