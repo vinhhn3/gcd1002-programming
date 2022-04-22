@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 using System.Linq;
 
 namespace BookStoreApplication
@@ -36,6 +37,12 @@ namespace BookStoreApplication
       List<Book> result = Books
         .Where(x => x.Author.Contains(name))
         .ToList();
+      return result;
+    }
+
+    public Book SearchBookByName(string name)
+    {
+      var result = Books.FirstOrDefault(x => x.Name == name);
       return result;
     }
   }
