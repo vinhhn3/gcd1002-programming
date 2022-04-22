@@ -2,16 +2,6 @@
 
 namespace BookStoreApplication
 {
-  public class Command
-  {
-    public const int LIST_ALL_BOOK = 1;
-    public const int ADD_NEW_BOOK = 2;
-    public const int SEARCH_BY_BOOK_NAME = 3;
-    public const int SEARCH_BY_AUTHOR_NAME = 4;
-    public const int UPDATE_BOOK_BY_NAME = 5;
-    public const int EXIT_APPLICATION = 9;
-  }
-
   internal class Program
   {
     static void Main(string[] args)
@@ -72,7 +62,19 @@ namespace BookStoreApplication
               bookInStore.Price = newPrice;
             }
             break;
-
+          case Command.DELETE_BOOK_BY_NAME:
+            Console.WriteLine("Enter book name to delete");
+            string deleteBookName = Console.ReadLine();
+            var isDeleted = store.DeleteBookByName(deleteBookName);
+            if (isDeleted)
+            {
+              Console.WriteLine("Deleted Succesfully ...");
+            }
+            else
+            {
+              Console.WriteLine("Book Not Found ...");
+            }
+            break;
           case Command.EXIT_APPLICATION:
             return;
           default:
@@ -91,6 +93,7 @@ namespace BookStoreApplication
       Console.WriteLine("3. Search book by name");
       Console.WriteLine("4. Search book by author name");
       Console.WriteLine("5. Update book by name");
+      Console.WriteLine("6. Delete book by name");
       Console.WriteLine("9. Exit");
       Console.WriteLine("Please choose your options");
     }
