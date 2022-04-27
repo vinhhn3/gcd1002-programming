@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingConvention", "CodingConvention\CodingConvention.csproj", "{8DA6AD0B-4BF7-4FDD-B517-BE6A98825600}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreApplication", "BookStoreApplication\BookStoreApplication.csproj", "{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreApplication", "BookStoreApplication\BookStoreApplication.csproj", "{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicGUIApp", "BasicGUIApp\BasicGUIApp.csproj", "{E56A9EEA-6A05-4931-8D75-45527C30CB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{C6937C2F-4304-4086-B6D1-E523F56E45AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78DDA6B5-E6B0-4482-803D-2ABE895E4EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56A9EEA-6A05-4931-8D75-45527C30CB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56A9EEA-6A05-4931-8D75-45527C30CB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56A9EEA-6A05-4931-8D75-45527C30CB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56A9EEA-6A05-4931-8D75-45527C30CB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6937C2F-4304-4086-B6D1-E523F56E45AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6937C2F-4304-4086-B6D1-E523F56E45AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6937C2F-4304-4086-B6D1-E523F56E45AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6937C2F-4304-4086-B6D1-E523F56E45AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
